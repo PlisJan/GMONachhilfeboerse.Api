@@ -79,7 +79,7 @@ export default async (req: Request, res: Response) => {
     // Add the user to the database
     const dbResult = await query(
         `UPDATE Users
-        SET email=?,
+        SET email=?
         WHERE username = ?
     `,
         [validationResult.value.email, validationResult.value.user.username]

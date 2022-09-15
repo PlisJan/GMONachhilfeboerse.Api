@@ -66,7 +66,9 @@ import validationPatterns from "@/validation/commonPatterns";
 export default async (req: Request, res: Response) => {
     // Create validation schema
     const schema = Joi.object({
-        phonenumber: Joi.string().alphanum().required(), // phonenumber, optional
+        phonenumber: Joi.string()
+            .regex(/^[ \+0-9]*$/)
+            .required(), // phonenumber, optional
         user: validationPatterns.user, // required user (for pattern see validation/commonPatterns)
     });
 
