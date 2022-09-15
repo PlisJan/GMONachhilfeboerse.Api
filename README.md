@@ -1,6 +1,6 @@
 # GMONachhilfeboerse.Api
 
-## Use this image:
+## How to use this image:
 
 ### Docker run
 
